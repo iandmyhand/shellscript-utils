@@ -23,8 +23,8 @@ printScreenAddToFile(){
         # ${3} ==> $days_until_expiry
         # ${4} ==> server, intermediate, server certificate
         # ${5} ==> Emphasizing when expiry date comes close.
-        echo -e "${5} ${4} SSL Certificate Expiration Date : ${2} : ${3} days left (UTC) ${5}"
-        echo -e "${4} SSL Certificate Expiration Date : ${2} : ${3} days left (UTC) ${5}" >> expiry.txt
+        echo -e "${5} ${1} ${4} SSL Certificate Expiration Date : ${2} : ${3} days left (UTC) ${5}"
+        echo -e "${1} ${4} SSL Certificate Expiration Date : ${2} : ${3} days left (UTC) ${5}" >> expiry.txt
 }
 
 ### A function to clean up. ###
@@ -54,9 +54,9 @@ do
                         STRING_STRESS="<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<---------------------WARNING------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
                         STRESS="\n"$STRING_STRESS"\n"$STRING_STRESS"\n"$STRING_STRESS"\n"
                 fi
-                
+
                 if [ "$i" -eq 1 ]
-                then    
+                then
                         printScreenAddToFile $DOMAIN ${expiry_date[$(($i-1))]} $days_until_expiry server $STRESS
                         cal -3 $cal_format 2> /dev/null
                 elif [ "$i" -eq "${#expiry_date[@]}" ]
