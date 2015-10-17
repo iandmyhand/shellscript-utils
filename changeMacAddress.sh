@@ -1,5 +1,6 @@
 #!/bin/bash
-# Please fill in below variables with your MAC addresses!
+# 1. Please fill in below variables with your MAC addresses!
+# 2. run $ changeMacAddressTo.sh [iPhone|Macbook]
 MAC_MACBOOK=
 MAC_IPHONE=
 SUPPORTED_DEVICES=("iPhone" "Macbook")
