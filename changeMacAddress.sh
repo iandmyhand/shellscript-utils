@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Please fill in below variables with your MAC addresses!
 MAC_MACBOOK=
 MAC_IPHONE=
 SUPPORTED_DEVICES=("iPhone" "Macbook")
