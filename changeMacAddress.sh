@@ -7,7 +7,7 @@ SUPPORTED_DEVICES=("iPhone" "Macbook")
 
 usage() { echo "Usage: $0 ['iPhone'|'Macbook']" 1>&2; echo ""; exit 1; }
 
-isIn () {
+isIn() {
     local e
     for e in "${@:2}"; do [[ "$e" == "$1" ]] && return 0; done
     return 1
